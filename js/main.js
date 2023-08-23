@@ -23,8 +23,11 @@ update();
 
 function addHours(hours) {
     if (hours > 0) {
+        input.value = '';
         currentHours += parseFloat(hours);
         localStorage.setItem('internshipHours', currentHours);
+    } else {
+        alert('Dat werkt niet zo! Probeer het opnieuw met een getal.')
     }
     update();
 }
