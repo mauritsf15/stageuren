@@ -4,6 +4,7 @@ const days = document.querySelector('.days');
 const weeks = document.querySelector('.weeks');
 const btn = document.querySelector('.btn');
 const input = document.querySelector('.input');
+const value = document.querySelector('.progress-bar');
 
 const hoursToGet = 960;
 let currentHours = parseFloat(localStorage.getItem('internshipHours'));
@@ -17,6 +18,9 @@ function update() {
     hoursToGo.innerText = hoursToGet - currentHours;
     days.innerText = (hoursToGet - currentHours) / 8;
     weeks.innerText = (hoursToGet - currentHours) / 40;
+    let num = currentHours / hoursToGet;
+    value.style.width = `${Math.round(num * 10000) / 100}%`
+    value.innerText = `${Math.round(num * 10000) / 100}%`
 }
 
 update();
