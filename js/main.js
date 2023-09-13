@@ -34,8 +34,7 @@ function addHours(hours) {
         currentHours += parseFloat(hours);
         localStorage.setItem('internshipHours', currentHours);
         const date = new Date()
-        console.log(date);
-        localStorage.setItem('latestdate', date.getDate() + '/' + date.getMonth());
+        localStorage.setItem('latestdate', date.getDate() + '/' + (date.getMonth() + 1));
     } else {
         alert('Dat werkt niet zo! Probeer het opnieuw met een getal.')
     }
