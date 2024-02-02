@@ -1,0 +1,51 @@
+:root {
+    --text: #fdd7d3;
+    --background: #1e0302;
+    --primary: #f8816e;
+    --secondary: #a37a08;
+    --accent: #e8f317;
+}
+
+body {
+    background-color: var(--background) !important;
+    color: var(--text) !important;
+}
+
+.vh100 {
+    height: 100vh;
+}
+
+.input {
+    border: none;
+    background: transparent;
+    outline: 0;
+    border-bottom: 3px solid var(--secondary);
+    color: var(--text);
+    transition: border-color 0.2s;
+}
+
+.input:focus {
+    border-bottom-color: var(--primary);
+}
+
+.button {
+    padding: 10px 40px;
+    background-color: var(--accent);
+    text-decoration: none;
+    color: var(--background);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.number {
+    font-size: 32px;
+}
+
+.progress-bar {
+    background-color: var(--primary);
+}
+
+.progress {
+    background-color: var(--background);
+    outline: 1px solid var(--accent);
+}
